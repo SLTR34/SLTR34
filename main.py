@@ -1,53 +1,70 @@
 # Do not modify these lines
-__winc_id__ = '7b9401ad7f544be2a23321292dd61cb6'
-__human_name__ = 'arguments'
+__winc_id__ = "ae539110d03e49ea8738fd413ac44ba8"
+__human_name__ = "files"
 
 # Add your code after this line
 
+# import modules
+import os
+import shutil
+from zipfile import ZipFile
 
-# Part 1: Greet template.
+# 1 :function clean_cache.
 
-# Define a function greet in main.py that takes these arguments.
+def clean_cache():
+    cache_path = "files\cache"
 
-def greet(name, template = "Hello, <name>!"):
-    greet = template.replace("<name>", name)
-    return greet
+    if os.path.exists(cache_path):
+        shutil.rmtree(cache_path)
 
-# Part 2: Force.
-mass=0
-def force(mass=0, body="earth"):
-    mass = int(mass)
-    body = str(body)
-    
-    planets = {
-        "mercury" : 3.7,
-        "venus" : 8.9, 
-        "earth" : 9.8, 
-        "moon" : 1.6,
-        "mars" : 3.7, 
-        "jupiter" : 23.1, 
-        "saturn" : 9,
-        "uranus" : 8.7,
-        "neptune" : 11,
-        "pluto" : 0.7
-    }
-    # I am aware that pluto and the moon are not a planet ;)
-    bodywaight = planets.get(body)
-    force = mass*bodywaight
-    force == mass * (planets.get(body))
-    return force
+    os.makedirs(cache_path)
+    print("Cache folder has been cleaned.")
 
-print(force(69))
+# 2 : function cache_zip.
 
- # Part 3: Gravity.
+def cache_zip(zip_path, cache_path):
+    with ZipFile(zip_path, 'r') as datazip:
+        datazip.extractall(cache_path)
+    print("Zip file has been unpacked into the cache folder.")
 
- # pull(f) = G × ((m1×m2)/d2)
+# 3 : function cached_files.
 
-def pull(m1, m2, d):
-    
-    forceconstant = (6.674 * 10**-11) 
-    pull = forceconstant * (m1 * m2)/(d**2)  
+def cached_files():
+    cache_directory = "files\cache"
+    file_paths = []
+    for root, dirs, files in os.walk(cache_directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            file_paths.append(os.path.abspath(file_path))
+    return file_paths
 
-    return pull
+# 4 : function find_password.
 
-print(pull(800, 1500, 3), 10)
+def find_password(file_paths):
+    password_indicator = "password"
+
+    for file_path in file_paths:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            if password_indicator in content:
+                password_start_index = content.index(password_indicator) + len(password_indicator) + 1
+                password = content[password_start_index:].split()[0]
+                return password
+
+    return None
+
+# Clean the cache folder
+clean_cache()
+
+# Get the list of file paths in the cache
+files = cached_files()
+
+# Find the password in the files
+password = find_password(files)
+
+if password:
+   print(f"The password is: {password}")
+else:
+    print("Password not found.")
+
+
