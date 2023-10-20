@@ -1,8 +1,8 @@
-- 👋 Hi, I’m @SLTR34
-- 👀 I’m interested in coding 
-- 🌱 I’m currently learning python en JS
-- 💞️ I’m looking to collaborate on to get started 
-- 📫 How to reach me by mail
+- 👋 Hi, I’m @SLTR34.
+- 👀 I’m interested in coding. 
+- 🌱 I’m currently learning python, JS, HTML en Flask.
+- 💞️ I’m looking to collaborate on to get started. 
+- 📫 How to reach me by mail: ikbenstefanz@gmail.com.
 
 <!---
 SLTR34/SLTR34 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
