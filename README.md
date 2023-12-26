@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @SLTR34.
 - 👀 I’m interested in coding. 
-- 🌱 I’m currently learning python, JS, HTML en Flask.
+- 🌱 I’m currently learning Python, JS, HTML, CCS, Flask en SQLite and also Agile.
 - 💞️ I’m looking to collaborate on to get started. 
 - 📫 How to reach me by mail: ikbenstefanz@gmail.com.
 
