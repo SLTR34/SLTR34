@@ -1,4 +1,6 @@
-- 👋 Hi, I’m @SLTR34.
+- 👋 Hi, I’m Stefan!
+- Junior programmer, beginner Cybersecurity Progessional and IT-consultant.
+  
 - 👀 I’m interested in coding. 
 - 🌱 I’m currently learning Python, JS, HTML, CCS, Flask en SQLite and also Agile.
 - 💞️ I’m looking to collaborate on to get started. 
