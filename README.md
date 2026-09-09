@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Stefan!
-- Junior programmer, beginner Cybersecurity Professional, applicatie beheerder, IT-consultant and data-analist.
+- Junior programmer and working cuurently as Junior IT Specalist.
   
 - 👀 I’m interested in coding. 
 - 🌱 I’m currently learning Python, JS, HTML, CCS, Flask en SQLite and more.
